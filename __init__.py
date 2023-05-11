@@ -89,10 +89,10 @@ def RuntimeFunctionality(database: str=f"/home/{user()}/.local/database/finance.
     # If the database already exists, do nothing. Otherwise;
     if SQLite3.checkTable(  database, "income" ) > 0:
         # Check for an existing entry for the current pay period.
-        if len( SQLite3.checkRow( database,
-                                  "income",
-                                  "date",
-                                  str(PayPeriod) ) ) > 0:
+        if len( SQLite3.selectRow( database,
+                                   "income",
+                                   "date",
+                                   str(PayPeriod) ) ) > 0:
 
             # If input has been given then flag WEEKLY as true.
             messagebox.showinfo( title="Weekly Income",
@@ -111,7 +111,7 @@ def RuntimeFunctionality(database: str=f"/home/{user()}/.local/database/finance.
     # NOTE: [Hours Table] configuration.
     # Create the hours table if it doesn't exist.
     if SQLite3.checkTable(  database, "hours" ) > 0:
-        if len( SQLite3.checkRow( database,
+        if len( SQLite3.selectRow( database,
                                   "hours",
                                   "date",
                                   str(date) ) ) > 0:
@@ -159,10 +159,10 @@ def collectHours(database, period):
                                               f"\nClcok-Out: {clockout}"
                                               f"\n\nIs this correct?" )  ):
 
-                SQLite3.newRow( database, 
-                                "hours", 
-                                "date, clockin, clockout",
-                                f"'{period}', {clockin}, {clockout}" )
+                SQLite3.new_uniqueRow( database, 
+                                        "hours", 
+                                        "date, clockin, clockout",
+                                        f"'{period}', {clockin}, {clockout}" )
 
                 window.destroy()
 
@@ -256,10 +256,10 @@ def collectIncome(database, period):
                                               f"\nBitcoin Amount: {str(bitcoin)}"
                                               f"\n\nIs this correct?" )   ):
 
-                SQLite3.newRow( database, 
-                                "income", 
-                                "date, dollar, satoshi, bitcoin",
-                                f"'{period}', {dollar}, {satoshi}, {bitcoin}" )
+                SQLite3.new_uniqueRow( database, 
+                                       "income", 
+                                       "date, dollar, satoshi, bitcoin",
+                                       f"'{period}', {dollar}, {satoshi}, {bitcoin}" )
 
                 window.destroy()
 
