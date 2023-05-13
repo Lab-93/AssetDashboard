@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "Lab93IncomeReporter"
+version = "0.0.1"
+authors = [
+  { name="Hunter Dale", email="hunter@guyyatsu.me" },
+]
+
+description = "A GUI tool for tracking paystubs and hours worked."
+readme = "readme.md"
+requires-python = ">=3.10"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+dependencies = [
+    "Lab93DatabaseSystem",
+    "tkinter"
+]
+
+[project.urls]
+"Homepage" = "https://github.com/guyyatsu/Lab93-IncomeReporter"
+"Bug Tracker" = "https://github.com/guyyatsu/Lab93-IncomeReporter/issues"

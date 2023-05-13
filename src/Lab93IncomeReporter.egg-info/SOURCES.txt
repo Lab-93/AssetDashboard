@@ -1,0 +1,8 @@
+pyproject.toml
+readme.md
+src/Lab93IncomeReporter/__init__.py
+src/Lab93IncomeReporter.egg-info/PKG-INFO
+src/Lab93IncomeReporter.egg-info/SOURCES.txt
+src/Lab93IncomeReporter.egg-info/dependency_links.txt
+src/Lab93IncomeReporter.egg-info/requires.txt
+src/Lab93IncomeReporter.egg-info/top_level.txt

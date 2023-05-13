@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: Lab93DatabaseSystem
+Version: 0.0.3
+Summary: An API for interfacing with SQLite3 databases from the command line.
+Author-email: Hunter Dale <hunter@guyyatsu.me>
+Project-URL: Homepage, https://github.com/guyyatsu/Lab93-Database-System
+Project-URL: Bug Tracker, https://github.com/guyyatsu/Lab93-Database-System/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+
+# Lab-93 SQLite3 Databse API
+![PyPI](https://img.shields.io/pypi/v/Lab93DatabaseSystem?label=pip%20version&style=plastic)
+
+Lab-93's in-house data handling methodology; standardized as a python command-line tool.
+
+
+## Installation
+```
+python3 -m pip install --upgrade Lab93DatabaseSystem
+```
+
+## Usage
+To build the default database type  
+```
+python3 -m Lab93DatabaseSystem.__init__
+```

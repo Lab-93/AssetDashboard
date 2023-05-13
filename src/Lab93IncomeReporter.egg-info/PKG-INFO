@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: Lab93IncomeReporter
+Version: 0.0.1
+Summary: A GUI tool for tracking paystubs and hours worked.
+Author-email: Hunter Dale <hunter@guyyatsu.me>
+Project-URL: Homepage, https://github.com/guyyatsu/Lab93-IncomeReporter
+Project-URL: Bug Tracker, https://github.com/guyyatsu/Lab93-IncomeReporter/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
